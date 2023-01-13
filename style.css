@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    background:#0F0D13;
+    font-family: 'Roboto', sans-serif;
+}
+
+#app{
+    display:grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas:
+    'a b'
+    'a c';
+    place-content: center;
+    gap:32px;
+    height: 100vh;
+}
+
+.player{
+    background:#2A2141;
+    padding:28px;
+    border-radius: 10px;
+}
+
+.player img {
+    border-radius: 10px;
+}
+
+.player h1 {
+    font-size: 24px;
+    color: #E1E1E6;
+}
+
+.player p {
+    font-size:19px;
+    color: #E1E1E6;
+    opacity: 0.67;
+}
+
+#player-1{
+    grid-area: a;
+    padding:50px 38px;
+    width: fit-content;
+}
+
+#player-1 .wrapper{
+    width: 190px;
+}
+
+#player-1 .info{
+    margin-top:28px;
+    text-align: center;
+}
+
+#player-2{
+    grid-area: b;
+    height: fit-content;
+}
+
+#player-2 img{
+    width: 90px;
+    height: 90px;
+}
+
+#player-2 .contols{
+    padding:0px 50px;
+}
+
+.info-wrapper{
+    display: flex;
+    align-items: center;
+    gap:29px;
+}
+
+#player-3{
+    grid-area: c;
+    height: fit-content;
+}
+
+#player-3 img{
+    width: 90px;
+    height: 90px;
+}
+
+#player-3 .contols{
+    padding:0px 50px;
+}
+
+.contols{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+.trak{
+    position: relative;
+    margin-top:10px;
+}
+
+.trak::before{
+    content: ' ';
+    height: 6px;
+    width: 100%;
+    display: block;
+    background: #d9d9d9;
+    opacity: 0.3;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.trak::after{
+    content: ' ';
+    height: 6px;
+    width: 80%;
+    display: block;
+    background: #d9d9d9;
+    border-radius: 10px;
+}
+
+.time{
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+    color:#c4c4c4;
+    opacity: 0.60;
+}
+
+@media (max-width: 768px) { 
+    #app{
+        display: flex;
+        flex-direction: column;
+        max-width: 270px;
+        margin:auto;
+        height: auto;
+        padding-block:60px;
+    }
+    
+    #player-2 .contols{
+        padding:0px 30px;
+    }
+    
+    #player-3 .contols{
+        padding:0px 30px;
+    }
+}
